@@ -3,41 +3,45 @@ from ChessPiece import ChessPiece
 
 
 class Knight(ChessPiece):
-
     """position is the current position of Knight. row and col given for where
        the piece should be moved. Board is a two dimensional array which
        contains player has what pieces on the board.
        For example at board[1,1] there might be a white piece represented by "W"
        Black piece represented by "B" and empty represented by "E"
     """
+
+    def get_valid_coordinates(self) -> list:
+        """Return a list of valid moves that the Knight has.
+        """
+        ans = []
+        current_row, current_col = self.position[0], self.position[1]
+        # A Knight only has 8 possible moves.
+        ans.append((current_row - 2, current_col - 1))
+        ans.append((current_row - 2, current_col + 1))
+        ans.append((current_row - 1, current_col - 2))
+        ans.append((current_row - 1, current_col + 2))
+        ans.append((current_row + 1, current_col - 2))
+        ans.append((current_row + 1, current_col + 2))
+        ans.append((current_row + 2, current_col - 1))
+        ans.append((current_row + 2, current_col + 1))
+        return ans
+
+    def valid_coordinates(self, row, col) -> bool:
+        """Return True iff (row, col) is a valid position that the Knight can
+        move to."""
+        valid = False
+
+        for move in self.get_valid_coordinates():
+            if row == move[0] and col == move[col]:
+                valid = True
+
+        return valid
+
     def check_move(self, row, col, board) -> bool:
-        check_position = [0, 0]
-
-        # If player's own piece is present then invalid move
-        if board[row][col] == self.color:
-            return False
-
-        # Knight only has 8 possible moves.
-        # Id doesnt matter if position is empty or taken by enemy.
-        # Knight will take the position
-        if row == self.position[0]+2 and col == self.position[1]+1:
-            return True
-        elif row == self.position[0]+2 and col == self.position[1]-1:
-            return True
-        elif row == self.position[0]+1 and col == self.position[1]+2:
-            return True
-        elif row == self.position[0]+1 and col == self.position[1]-2:
-            return True
-        elif row == self.position[0]-1 and col == self.position[1]+2:
-            return True
-        elif row == self.position[0]-1 and col == self.position[1]-2:
-            return True
-        elif row == self.position[0]-2 and col == self.position[1]+1:
-            return True
-        elif row == self.position[0]-2 and col == self.position[1]-1:
-            return True
-
-        return False
+        """Return True iff there is an enemy piece or empty at the (row, col).
+        """
+        return self.valid_coordinates(row, col) and board[row][col] != \
+            self.color
 
 
 if __name__ == "__main__":
@@ -60,23 +64,13 @@ if __name__ == "__main__":
     """
 
 p1 = Knight("B", [4, 3])
-board = [["B","B","B","B","B","B","B","B"],
-         ["B","B","B","B","B","B","B","B"],
-         ["E","E","E","E","E","E","E","E"],
-         ["E","E","E","E","E","E","E","E"],
-         ["E","E","E","E","E","E","E","E"],
-         ["E","E","E","E","E","E","E","E"],
-         ["W","W","W","W","W","W","W","W"],
-         ["W","W","W","W","W","W","W","W"]
+board = [["B", "B", "B", "B", "B", "B", "B", "B"],
+         ["B", "B", "B", "B", "B", "B", "B", "B"],
+         ["E", "E", "E", "E", "E", "E", "E", "E"],
+         ["E", "E", "E", "E", "E", "E", "E", "E"],
+         ["E", "E", "E", "E", "E", "E", "E", "E"],
+         ["E", "E", "E", "E", "E", "E", "E", "E"],
+         ["W", "W", "W", "W", "W", "W", "W", "W"],
+         ["W", "W", "W", "W", "W", "W", "W", "W"]
          ]
 print(p1.check_move(p1.position, 2, 3, board))
-
-
-
-
-
-
-
-
-
-
