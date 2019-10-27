@@ -9,8 +9,8 @@ class Rook(ChessPiece):
        for example at board[1,1] there might be a white piece represented by "W".
        Black piece represented by "B" and empty represented by "E"
     """
-    def move(self, position, row, col, board):
-        check_position = []
+    def check_move(self, position, row, col, board):
+        check_position = [0,0]
         if col > position[1]: # Rook moves towards right
             check_position[1] = position[1]+1
             move = "r"
@@ -30,15 +30,16 @@ class Rook(ChessPiece):
         """check whether every square is empty between rook and point to move. Keep checking until position is reached 
            or a piece found
         """
-        while board[check_position[0]][check_position[1]] == "E" and (row != check_position[0] and col != check_position[1]):
+
+        while board[check_position[0]][check_position[1]] == "E" and (row != check_position[0] or col != check_position[1]):
             if move == "b":
-                check_position[0] = position[0] - 1
+                check_position[0] = check_position[0] - 1
             elif move == "f":
-                check_position[0] = position[0] + 1
+                check_position[0] = check_position[0] + 1
             elif move == "l":
-                check_position[1] = position[1] - 1
+                check_position[1] = check_position[1] - 1
             elif move == "r":
-                check_position[1] = position[1] + 1
+                check_position[1] = check_position[1] + 1
 
         # First check to see if a piece was found in way before reaching position if yes then return false
         # as move cannot be made
@@ -73,7 +74,7 @@ Board will be represented the following way in 2-d array
          0   1   2   3   4   5   6   7
 """
 
-p1 =Rook()
+p1 = Rook("B", [1, 0])
 board = [["W","W","W","W","W","W","W","W"],
          ["W","W","W","W","W","W","W","W"],
          ["E","E","E","E","E","E","E","E"],
@@ -83,6 +84,7 @@ board = [["W","W","W","W","W","W","W","W"],
          ["B","B","B","B","B","B","B","B"],
          ["B","B","B","B","B","B","B","B"]
          ]
+print(p1.check_move(p1.position, 3, 1, board))
 
 
 
