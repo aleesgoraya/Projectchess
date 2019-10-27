@@ -27,7 +27,10 @@ class Rook(ChessPiece):
             check_position[0]=position[0]-1
             move = "b"
 
-        while board[check_position[0]][check_position[1]] == "E":  # check whether every square in between is empty
+        """check whether every square is empty between rook and point to move. Keep checking until position is reached 
+           or a piece found
+        """
+        while board[check_position[0]][check_position[1]] == "E" and (row != check_position[0] and col != check_position[1]):
             if move == "b":
                 check_position[0] = position[0] - 1
             elif move == "f":
@@ -37,9 +40,24 @@ class Rook(ChessPiece):
             elif move == "r":
                 check_position[1] = position[1] + 1
 
-        if board[check_position[0]][check_position[1]] == self.color:           # check if there is a player
-            return False
+        # First check to see if a piece was found in way before reaching position if yes then return false
+        # as move cannot be made
+        if check_position[0] == row and check_position[1] == col:
 
+            # check if there is already a player piece there then move cannot be made
+            if board[check_position[0]][check_position[1]] == self.color:
+
+                return False
+
+            # check if the piece found is for other player. Player can take the piece and assume its position
+            if board[check_position[0]][check_position[1]] == "B":
+
+                return True
+
+            return True     # This means that the row and col given was empty so piece can be placed
+            
+        else:
+            return False
 
 
 
