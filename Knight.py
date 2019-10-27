@@ -10,7 +10,7 @@ class Knight(ChessPiece):
        For example at board[1,1] there might be a white piece represented by "W"
        Black piece represented by "B" and empty represented by "E"
     """
-    def check_move(self, row, col, board):
+    def check_move(self, row, col, board) -> bool:
         check_position = [0, 0]
 
         # If player's own piece is present then invalid move

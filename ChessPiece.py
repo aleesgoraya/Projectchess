@@ -16,6 +16,16 @@ class ChessPiece(ABC):
     def return_position(self) -> tuple:
         return self.position
 
+    def move(self, position) -> None:
+        """Change the position of this piece to <position>.
+        """
+        self.position = position
+
+    def get_valid_coordinates(self) -> list:
+        """Return a list of valid moves of this piece.
+        """
+        raise NotImplementedError
+
     def valid_coordinates(self, row, col) -> bool:
         """
         Return true iff the (row, col) is a position that the piece can move to.
