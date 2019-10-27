@@ -5,15 +5,15 @@ class ChessPiece(ABC):
 
     # position is an array containing row and col
     # e.g [0,1] 0 is row and 1 is col
-    def __init__(self, color, position):
+    def __init__(self, color, position) -> None:
         self.color = color
         self.position = position
         super().__init__()
 
-    def return_color(self):
+    def return_color(self) -> str:
         return self.color
 
-    def return_position(self):
+    def return_position(self) -> tuple:
         return self.position
 
     def valid_coordinates(self, row, col) -> bool:

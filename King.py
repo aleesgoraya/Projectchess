@@ -19,6 +19,9 @@ class King(ChessPiece):
         move to.
         """
         valid = False
+
+        # loop through all 9 positions around the King to check if
+        # (row, col) is one of them
         for i in range(-1, 2):
             for j in range(-1, 2):
                 if row == self.position[0] + i and col == self.position[1] + j:
