@@ -14,11 +14,14 @@ class King(ChessPiece):
          """
         super().__init__(color, position)
 
-    def check_move(self, row, col, board) -> bool:
+    def valid_coordinates(self, row, col) -> bool:
+        """Return true iff (row, col) is a valid position that the King can
+        move to.
         """
-
-        :param row:
-        :param col:
-        :param board:
-        :return:
-        """
+        valid = False
+        for i in range(-1, 1):
+            for j in range(-1, 1):
+                if row == self.position[0] + i and col == self.position[1] + j:
+                    valid = True
+        return valid
+        
