@@ -9,7 +9,7 @@ class Player:
 
     def move(self, startrow, startcol, moveposition):
         chosen = self.chess.chessboard.board[startrow][startcol]
-        if isinstance(chosen, ChessPiess) and chosen in self.chess_piece and moveposition in chosen.ValidMoves():
+        if isinstance(chosen, ChessPiess) and chosen in self.chess_piece and moveposition in chosen.get_valid_coordinates():
             chosen.move(moveposition)
 
     def getmove():
