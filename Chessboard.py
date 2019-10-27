@@ -1,4 +1,5 @@
 class Chessboard:
+<<<<<<< HEAD
     def __init__(self):
         self.board = [[], [], [], [], [], [], [], []]
         for row in len(self.board):
@@ -49,3 +50,13 @@ class Chessboard:
             self.board[piece.position[0]][piece.position[1]] = piece
         for piece in self.black:
             self.board[piece.position[0]][piece.position[1]] = piece
+=======
+    """A class representing a chess board for a chess game. A chess board
+    is a 8*8 grid.
+    """
+
+    def __init__(self) -> None:
+        """Initializing a chess board for the chess game.
+        """
+        pass
+>>>>>>> 7eb71958b640c019a1a12afbfdc1af42a14994da
