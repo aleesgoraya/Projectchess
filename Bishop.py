@@ -4,7 +4,7 @@ from ChessPiece import ChessPiece
 
 class Bishop(ChessPiece):
 
-    """position is the current position of rook. row and col given for where the piece should be moved.
+    """position is the current position of bishop. row and col given for where the piece should be moved.
        board is a two dimensional array which contains player has what pieces on the board.
        for example at board[1,1] there might be a white piece represented by "W".
        Black piece represented by "B" and empty represented by "E"
@@ -33,7 +33,7 @@ class Bishop(ChessPiece):
             move = "b"
 
         """
-           check whether every square is empty between rook and point to move. Keep checking until position is reached 
+           check whether every square is empty between bishop and point to move. Keep checking until position is reached 
            or a piece found
         """
 
