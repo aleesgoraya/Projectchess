@@ -22,21 +22,12 @@ class King(ChessPiece):
 
         for d_row in range(-1, 2):
             for d_col in range(-1, 2):
-                while current_row < 8 and current_col < 8:
+                while 0 <= current_row < 8 and 0 <= current_col < 8:
                     current_row += d_row
                     current_col += d_col
                     ans.append((current_row, current_col))
+
+        ans.remove((self.position[0], self.position[1]))
         return ans
 
-    def valid_coordinates(self, row, col) -> bool:
-        """Return true iff (row, col) is a valid position that the King can
-        move to.
-        """
-        valid = False
-
-        for move in self.get_valid_coordinates():
-            if row == move[0] and col == move[1]:
-                valid = True
-
-        return valid
 

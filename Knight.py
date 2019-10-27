@@ -26,17 +26,6 @@ class Knight(ChessPiece):
         ans.append((current_row + 2, current_col + 1))
         return ans
 
-    def valid_coordinates(self, row, col) -> bool:
-        """Return True iff (row, col) is a valid position that the Knight can
-        move to."""
-        valid = False
-
-        for move in self.get_valid_coordinates():
-            if row == move[0] and col == move[col]:
-                valid = True
-
-        return valid
-
     def check_move(self, row, col, board) -> bool:
         """Return True iff there is an enemy piece or empty at the (row, col).
         """

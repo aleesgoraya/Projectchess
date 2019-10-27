@@ -3,43 +3,36 @@ from ChessPiece import ChessPiece
 
 
 class Pawn(ChessPiece):
-
     """
-    Changes methods to fit that of a pawn. ie valid_coordinates are only up one
-    diagonally on the board.
+    A class representing the Pawn piece in the chess class.
     """
 
     def __init__(self, colour, position):
         super().__init__(colour, position)
 
-    def valid_coordinates(self, row, col) -> bool:
+    def get_valid_coordinates(self) -> list:
+        """Return a list of valid moves that a Pawn has. Return an empty list
+        if there is no valid moves.
         """
-        Position is the current position of Pawn. Row and col is where the piece
-        should be moved. The board is a two dimensional array which contains the
-        players and their corresponding piece colour.
-        eg. at board[1,1] there might be a white piece represented by "W".
-        Black piece represented by "B" and empty represented by "E"
-        """
+        ans = []
+        current_row, current_col = self.position[0], self.position[1]
 
-        # Checks to ensure coordinates are on board
-        if row < 0 or row > 7:
-            return False
-        if col < 0 or col > 7:
-            return False
+        if self.color == "black":
+            # check if it is in the starting position
+            if current_row == 1 and current_col in [col for col in range(8)]:
+                ans.append((current_row + 2, current_col))
+                return ans
+            current_row += 1
+            if 0 <= current_row < 8:
+                ans.append((current_row + 1, current_col))
+            return ans
 
-        if self.position[0] <= row:  # ensures piece is moving forward
-            return False
-
-        rise = row - self.position[0]
-        run = col - self.position[1]
-
-        # checks to make sure piece isn't moving to current location
-        if rise == 0 and run == 0:
-            return False
-        # checks to see if piece is moving diagonally
-        elif rise/run == -1 or rise/run == 1:
-            return True
-        else:
-            return False
-
+        if self.color == "white":
+            if current_row == 6 and current_col in [col for col in range(8)]:
+                ans.append((current_row - 2, current_col))
+                return ans
+            current_row -= 1
+            if 0 <= current_row < 8:
+                ans.append((current_row - 1, current_col))
+            return ans
 

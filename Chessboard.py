@@ -55,6 +55,6 @@ class Chessboard:
         for piece in self.black:
             self.board[piece.position[0]][piece.position[1]] = piece
 
-    
 
-    
+
+

@@ -30,7 +30,13 @@ class ChessPiece(ABC):
         """
         Return true iff the (row, col) is a position that the piece can move to.
         """
-        raise NotImplementedError
+        valid = False
+
+        for move in self.get_valid_coordinates():
+            if row == move[0] and col == move[col]:
+                valid = True
+
+        return valid
 
     def check_move(self, row, col, board) -> bool:
         """
