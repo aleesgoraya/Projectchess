@@ -10,8 +10,8 @@ class Rook(ChessPiece):
        Black piece represented by "B" and empty represented by "E"
     """
     def move(self, position, row, col, board):
-        check_position=[]
-        if col>position[1]: # Rook moves towards right
+        check_position = []
+        if col > position[1]: # Rook moves towards right
             check_position[1] = position[1]+1
             move = "r"
 
@@ -24,7 +24,7 @@ class Rook(ChessPiece):
             move = "f"
 
         elif row<position[0]: # Rook moves backwards
-            check_position[0]=position[0]-1
+            check_position[0] = position[0]-1
             move = "b"
 
         """check whether every square is empty between rook and point to move. Keep checking until position is reached 
@@ -55,11 +55,34 @@ class Rook(ChessPiece):
                 return True
 
             return True     # This means that the row and col given was empty so piece can be placed
-            
+
         else:
             return False
 
 
+"""
+Board will be represented the following way in 2-d array
+     7  "W" "W","W","W","W","W","W","W"  
+     6  "W","W","W","W","W","W","W","W"     
+     5  "E","E","E","E","E","E","E","E"  
+     4  "E","E","E","E","E","E","E","E"  
+     3  "E","E","E","E","E","E","E","E"  
+     2  "E","E","E","E","E","E","E","E"  
+     1  "B","B","B","B","B","B","B","B"  
+     0  "B","B","B","B","B","B","B","B"  
+         0   1   2   3   4   5   6   7
+"""
+
+p1 =Rook()
+board = [["W","W","W","W","W","W","W","W"],
+         ["W","W","W","W","W","W","W","W"],
+         ["E","E","E","E","E","E","E","E"],
+         ["E","E","E","E","E","E","E","E"],
+         ["E","E","E","E","E","E","E","E"],
+         ["E","E","E","E","E","E","E","E"],
+         ["B","B","B","B","B","B","B","B"],
+         ["B","B","B","B","B","B","B","B"]
+         ]
 
 
 
