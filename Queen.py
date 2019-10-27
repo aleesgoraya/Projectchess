@@ -1,4 +1,4 @@
-rom array import *
+from array import *
 from ChessPiece import ChessPiece
 
 
@@ -46,7 +46,7 @@ class Queen(ChessPiece):
     '''
     def checkMove(self, position, row, col, board):
 
-        if not ValidCoordinates(position, row, col):
+        if not validCoordinates(position, row, col):
             return False
         
         r = False

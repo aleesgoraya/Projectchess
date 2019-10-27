@@ -11,26 +11,33 @@ class Rook(ChessPiece):
     """
     def check_move(self, position, row, col, board):
         check_position = [0,0]
+
         if col > position[1]: # Rook moves towards right
             check_position[1] = position[1]+1
+            check_position[0]=position[0]
             move = "r"
 
         elif col<position[1]: # Rook moves left
             check_position[1] = position[1] - 1
+            check_position[0] = position[0]
             move = "l"
 
         elif row>position[0]: # Rook moves forward
             check_position[0] = position[0] + 1
+            check_position[1] = position[1]
             move = "f"
 
         elif row<position[0]: # Rook moves backwards
             check_position[0] = position[0]-1
+            check_position[1] = position[1]
             move = "b"
+
+        print(check_position[0])
+        print(check_position[1])
 
         """check whether every square is empty between rook and point to move. Keep checking until position is reached 
            or a piece found
         """
-
         while board[check_position[0]][check_position[1]] == "E" and (row != check_position[0] or col != check_position[1]):
             if move == "b":
                 check_position[0] = check_position[0] - 1
@@ -40,18 +47,15 @@ class Rook(ChessPiece):
                 check_position[1] = check_position[1] - 1
             elif move == "r":
                 check_position[1] = check_position[1] + 1
-
         # First check to see if a piece was found in way before reaching position if yes then return false
         # as move cannot be made
         if check_position[0] == row and check_position[1] == col:
-
             # check if there is already a player piece there then move cannot be made
-            if board[check_position[0]][check_position[1]] == self.color:
-
+            if board[row][col] == self.color:
                 return False
 
             # check if the piece found is for other player. Player can take the piece and assume its position
-            if board[check_position[0]][check_position[1]] == "B":
+            if board[row][col] == "B":
 
                 return True
 
@@ -74,17 +78,20 @@ Board will be represented the following way in 2-d array
          0   1   2   3   4   5   6   7
 """
 
-p1 = Rook("B", [1, 0])
-board = [["W","W","W","W","W","W","W","W"],
-         ["W","W","W","W","W","W","W","W"],
-         ["E","E","E","E","E","E","E","E"],
-         ["E","E","E","E","E","E","E","E"],
-         ["E","E","E","E","E","E","E","E"],
-         ["E","E","E","E","E","E","E","E"],
+"""
+Testing out the class
+"""
+p1 = Rook("B", [5, 6])
+board = [["B","B","B","B","B","B","B","B"],
          ["B","B","B","B","B","B","B","B"],
-         ["B","B","B","B","B","B","B","B"]
+         ["E","E","E","E","E","E","E","E"],
+         ["E","E","E","E","E","E","E","E"],
+         ["E","E","E","E","E","E","E","E"],
+         ["E","E","E","E","E","E","E","E"],
+         ["W","W","W","W","W","W","W","W"],
+         ["W","W","W","W","W","W","W","W"]
          ]
-print(p1.check_move(p1.position, 3, 1, board))
+print(p1.check_move(p1.position, 1, 6, board))
 
 
 
