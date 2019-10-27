@@ -19,9 +19,9 @@ class King(ChessPiece):
         move to.
         """
         valid = False
-        for i in range(-1, 1):
-            for j in range(-1, 1):
+        for i in range(-1, 2):
+            for j in range(-1, 2):
                 if row == self.position[0] + i and col == self.position[1] + j:
                     valid = True
         return valid
-        
+
