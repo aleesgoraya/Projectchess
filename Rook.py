@@ -4,8 +4,9 @@ from ChessPiece import ChessPiece
 
 class Rook(ChessPiece):
 
-    def move(self,row,col,board):
-        if board[row][col] =  
+    def move(self,position,row,col,board):
+
+
 
 
 
