@@ -1,4 +1,3 @@
-from array import *
 from ChessPiece import ChessPiece
 
 
@@ -6,9 +5,6 @@ class Pawn(ChessPiece):
     """
     A class representing the Pawn piece in the chess class.
     """
-
-    def __init__(self, colour, position):
-        super().__init__(colour, position)
 
     def get_valid_coordinates(self) -> list:
         """Return a list of valid moves that a Pawn has. Return an empty list
@@ -28,6 +24,7 @@ class Pawn(ChessPiece):
             return ans
 
         if self.color == "white":
+            # check if it is in the starting position
             if current_row == 6 and current_col in [col for col in range(8)]:
                 ans.append((current_row - 2, current_col))
                 return ans

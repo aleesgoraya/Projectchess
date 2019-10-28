@@ -15,8 +15,8 @@ class Chessboard:
         """
         self.board = [[], [], [], [], [], [], [], []]
         for row in range(len(self.board)):
-            for col in (0, 8):
-                self.board[row].append('')
+            for col in range(0, 8):
+                self.board[row].append("")
         self.white = []
         self.black = []
         for col in range(0, 8):

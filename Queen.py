@@ -1,4 +1,3 @@
-from array import *
 from ChessPiece import ChessPiece
 
 
@@ -8,9 +7,6 @@ class Queen(ChessPiece):
     A Queen can move any number of steps in a straight line horizontally,
     vertically and diagonally if there's no other pieces in her way.
     """
-
-    def __init__(self, colour, position):
-        super().__init__(colour, position)
 
     def get_valid_coordinates(self) -> list:
         """Return a list of valid moves that the Queen has.

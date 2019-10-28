@@ -11,9 +11,13 @@ class ChessPiece(ABC):
         self.position = position
 
     def return_color(self) -> str:
+        """Return the color of this piece.
+        """
         return self.color
 
     def return_position(self) -> tuple:
+        """Return the position of this piece.
+        """
         return self.position
 
     def move(self, position) -> None:
