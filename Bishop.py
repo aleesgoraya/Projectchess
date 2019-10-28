@@ -1,5 +1,5 @@
 from array import *
-from ChessPiece import ChessPiece
+import ChessPiece
 
 
 class Bishop(ChessPiece):

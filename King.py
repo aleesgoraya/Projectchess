@@ -30,4 +30,3 @@ class King(ChessPiece):
         ans.remove((self.position[0], self.position[1]))
         return ans
 
-

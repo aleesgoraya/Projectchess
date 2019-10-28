@@ -10,6 +10,11 @@ class Knight(ChessPiece):
        Black piece represented by "B" and empty represented by "E"
     """
 
+    def __init__(self, color, position) -> None:
+        """Initializing a Knight piece.
+        """
+        super().__init__(color, position)
+
     def get_valid_coordinates(self) -> list:
         """Return a list of valid moves that the Knight has.
         """

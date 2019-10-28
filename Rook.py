@@ -6,6 +6,11 @@ class Rook(ChessPiece):
     """A class representing the Rook piece in the chess game.
     """
 
+    def __init__(self, color, position) -> None:
+        """Initializing a Rook piece.
+        """
+        super().__init__(color, position)
+
     def get_valid_coordinates(self) -> list:
         """Return a list of valid moves that the Rook has.
         """
