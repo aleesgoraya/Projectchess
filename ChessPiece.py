@@ -7,6 +7,8 @@ class ChessPiece(ABC):
     # position is an array containing row and col
     # e.g [0,1] 0 is row and 1 is col
     def __init__(self, color, position) -> None:
+        """Initialize a chess piece with <color> and <position>.
+        """
         self.color = color
         self.position = position
 
