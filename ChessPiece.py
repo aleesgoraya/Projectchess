@@ -7,9 +7,11 @@ class ChessPiece(ABC):
     _color: the color of this chess piece
     _position: the position of the chess piece
     """
+    _color: str
+    _position: tuple
 
     # position is an array containing row and col
-    # e.g [0,1] 0 is row and 1 is col
+    # e.g (0,1) 0 is row and 1 is col
     def __init__(self, color, position) -> None:
         """Initialize a chess piece with <color> and <position>.
         """
