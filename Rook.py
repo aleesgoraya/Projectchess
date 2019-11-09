@@ -11,13 +11,15 @@ class Rook(ChessPiece):
         ans = []
 
         for d_row in [-1, 1]:
-            current_row, current_col = self.position[0], self.position[1]
+            current_position = self.get_position()
+            current_row, current_col = current_position[0], current_position[1]
             while 0 <= current_row < 8:
                 current_row += d_row
                 ans.append((current_row, current_col))
 
         for d_col in [-1, 1]:
-            current_row, current_col = self.position[0], self.position[1]
+            current_position = self.get_position()
+            current_row, current_col = current_position[0], current_position[1]
             while 0 <= current_col < 8:
                 current_col += d_col
                 ans.append((current_row, current_col))

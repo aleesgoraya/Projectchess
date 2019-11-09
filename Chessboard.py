@@ -59,9 +59,9 @@ class Chessboard:
         self.black.append(b_queen)
         self.black.append(b_king)
         for piece in self.white:
-            self.board[piece.position[0]][piece.position[1]] = piece
+            self.board[piece.get_position()[0]][piece.get_position()[1]] = piece
         for piece in self.black:
-            self.board[piece.position[0]][piece.position[1]] = piece
+            self.board[piece.get_position()[0]][piece.get_position()[1]] = piece
 
 
 

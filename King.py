@@ -12,7 +12,8 @@ class King(ChessPiece):
         """Return a list of valid moves that the King has.
         """
         ans = []
-        current_row, current_col = self.position[0], self.position[1]
+        current_position = self.get_position()
+        current_row, current_col = current_position[0], current_position[1]
 
         for d_row in range(-1, 2):
             for d_col in range(-1, 2):
@@ -22,6 +23,6 @@ class King(ChessPiece):
                     ans.append((current_row, current_col))
 
         # this is not a valid move
-        ans.remove((self.position[0], self.position[1]))
+        ans.remove((current_position[0], current_position[1]))
         return ans
 

@@ -13,7 +13,8 @@ class Knight(ChessPiece):
         """Return a list of valid moves that the Knight has.
         """
         ans = []
-        current_row, current_col = self.position[0], self.position[1]
+        current_position = self.get_position()
+        current_row, current_col = current_position[0], current_position[1]
         # A Knight only has 8 possible moves.
         ans.append((current_row - 2, current_col - 1))
         ans.append((current_row - 2, current_col + 1))
@@ -29,4 +30,4 @@ class Knight(ChessPiece):
         """Return True iff there is an enemy piece or empty at the (row, col).
         """
         return self.valid_coordinates(row, col) and board[row][col] != \
-            self.color
+            self.get_color()

@@ -3,29 +3,33 @@ from abc import ABC, abstractclassmethod
 
 class ChessPiece(ABC):
     """A class representing a chess piece in the chess game.
+
+    _color: the color of this chess piece
+    _position: the position of the chess piece
     """
+
     # position is an array containing row and col
     # e.g [0,1] 0 is row and 1 is col
     def __init__(self, color, position) -> None:
         """Initialize a chess piece with <color> and <position>.
         """
-        self.color = color
-        self.position = position
+        self._color = color
+        self._position = position
 
-    def return_color(self) -> str:
+    def get_color(self) -> str:
         """Return the color of this piece.
         """
-        return self.color
+        return self._color
 
-    def return_position(self) -> tuple:
+    def get_position(self) -> tuple:
         """Return the position of this piece.
         """
-        return self.position
+        return self._position
 
     def move(self, position) -> None:
         """Change the position of this piece to <position>.
         """
-        self.position = position
+        self._position = position
 
     def get_valid_coordinates(self) -> list:
         """Return a list of valid moves of this piece.
@@ -59,24 +63,24 @@ class ChessPiece(ABC):
         forward = False
         back = False
 
-        check_position = [self.position[0], self.position[1]]
+        check_position = [self._position[0], self._position[1]]
         # Piece moves right
-        if col > self.position[1]:
+        if col > self._position[1]:
             check_position[1] += 1
             right = True
 
         # Piece moves left
-        elif col < self.position[1]:
+        elif col < self._position[1]:
             check_position[1] += - 1
             left = True
 
         # Piece moves forward
-        elif row > self.position[0]:
+        elif row > self._position[0]:
             check_position[0] += 1
             forward = True
 
         # Piece moves backwards
-        elif row < self.position[0]:
+        elif row < self._position[0]:
             check_position[0] += -1
             back = True
 
