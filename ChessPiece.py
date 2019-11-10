@@ -45,7 +45,7 @@ class ChessPiece(ABC):
         valid = False
 
         for move in self.get_valid_coordinates():
-            if row == move[0] and col == move[col]:
+            if row == move[0] and col == move[1]:
                 valid = True
 
         return valid
