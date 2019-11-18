@@ -34,6 +34,11 @@ class Chess:
         """
         return self._chess_board.get(row, col)
 
+    def get_chess_board(self) -> Chessboard:
+        """Return the chess board of this chess game.
+        """
+        return self._chess_board
+
     def move(self, row, col) -> None:
         """Make a move with the ChessBoard class and update the Chess Game
         accordingly.
@@ -44,7 +49,8 @@ class Chess:
             self._number_of_moves += 1
 
     def has_check(self, player):
-        """Return true if this player's king has been put into check, false otherwise
+        """Return true if this player's king has been put into check, false
+        otherwise
         """
         self._chess_board.has_check(player)
 
