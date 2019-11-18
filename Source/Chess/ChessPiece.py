@@ -64,8 +64,12 @@ class ChessPiece(ABC):
         left = False
         forward = False
         back = False
+        forward_right = False
+        forward_left = False
+        backward_right = False
+        backward_left = False
 
-        check_position = [self._position[0], self._position[1]]
+        check_position = [self.position[0], self.position[1]]
         # Piece moves right
         if col > self._position[1]:
             check_position[1] += 1
