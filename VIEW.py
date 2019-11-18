@@ -1,17 +1,17 @@
 import pygame
+import random
 
 purple = (128, 0, 128)
 pink = (255, 170, 255)
 light_blue = (82, 200, 220)
+red = (255, 0, 0)
 
 def next_colour(colour):
+    rand1 = random.randint(100, 255)
+    rand2 = random.randint(100, 255)
+    rand3 = random.randint(100, 255)
 
-    if colour == purple:
-        return pink
-    elif colour == pink:
-        return light_blue
-    else:
-        return purple
+    return rand1, rand2, rand3
 
 
 
