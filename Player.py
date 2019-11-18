@@ -1,3 +1,6 @@
+from ChessPiece import ChessPiece
+
+
 class Player:
     def __init__(self, chess, color):
         self.chess = chess
@@ -7,10 +10,12 @@ class Player:
         else:
             self.chess_piece = self.chess.chessboard.black
 
-    def move(self, startrow, startcol, moveposition):
-        chosen = self.chess.chessboard.board[startrow][startcol]
-        if isinstance(chosen, ChessPiess) and chosen in self.chess_piece and moveposition in chosen.get_valid_coordinates():
-            chosen.move(moveposition)
+    def move(self, start_row, start_col, move_position):
+        chosen = self.chess.chessboard.board[start_row][start_col]
+        if isinstance(chosen, ChessPiece) and chosen in self.chess_piece and \
+                move_position in chosen.get_valid_coordinates():
+            chosen.move(move_position)
 
-    def getmove():
+    @staticmethod
+    def get_move():
         raise NotImplementedError

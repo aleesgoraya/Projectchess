@@ -8,6 +8,7 @@ red = (255, 0, 0)
 margin_w = 77
 margin_h = 66
 
+
 def next_colour(colour):
     rand1 = random.randint(100, 255)
     rand2 = random.randint(100, 255)
@@ -32,7 +33,6 @@ def add_pieces(screen):
     queen = pygame.image.load("queen_black.png")
     queen = pygame.transform.scale(queen, (margin_w, margin_h))
     screen.blit(queen, (margin_w*3+(10*4), 10))
-
 
 def main():
 
