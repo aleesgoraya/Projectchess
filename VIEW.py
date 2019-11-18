@@ -7,6 +7,8 @@ light_blue = (82, 200, 220)
 red = (255, 0, 0)
 margin_w = 77
 margin_h = 66
+screen_width = 709
+screen_height = 618
 
 
 def next_colour(colour):
@@ -18,9 +20,6 @@ def next_colour(colour):
 
 
 def create_board():
-
-    screen_width = 709
-    screen_height = 620
     colour = pink
     screen = pygame.display.set_mode((screen_width, screen_height))
     for row in range(8):
@@ -29,10 +28,54 @@ def create_board():
             colour = next_colour(colour)
     return screen
 
+
 def add_pieces(screen):
-    queen = pygame.image.load("queen_black.png")
-    queen = pygame.transform.scale(queen, (margin_w, margin_h))
-    screen.blit(queen, (margin_w*3+(10*4), 10))
+
+    queen_b = pygame.image.load("queen_black.png")
+    queen_b = pygame.transform.scale(queen_b, (margin_w, margin_h))
+
+    pawn_b = pygame.image.load("pawn_black.png")
+    pawn_b = pygame.transform.scale(pawn_b, (margin_w, margin_h))
+
+    rook_b = pygame.image.load("rook_black.png")
+    rook_b = pygame.transform.scale(rook_b, (margin_w, margin_h))
+
+    knight_b = pygame.image.load("knight_black.png")
+    knight_b = pygame.transform.scale(knight_b, (margin_w, margin_h))
+
+    king_b = pygame.image.load("king_black.png")
+    king_b = pygame.transform.scale(king_b, (margin_w, margin_h))
+
+    bishop_b = pygame.image.load("bishop_black.png")
+    bishop_b = pygame.transform.scale(bishop_b, (margin_w, margin_h))
+
+    for i in range(8):  # black pawns
+        screen.blit(pawn_b, (margin_w*i + 10*(i+1), screen_height-(margin_h*2)-20))
+
+    for i in range(8):  # Other black pieces
+        if i == 0:
+            piece = rook_b
+        elif i == 1:
+            piece = knight_b
+        elif i == 2:
+            piece = bishop_b
+        elif i == 3:
+            piece = king_b
+        elif i == 4:
+            piece = queen_b
+        elif i == 5:
+            piece = bishop_b
+        elif i == 6:
+            piece = knight_b
+        elif i == 7:
+            piece = rook_b
+        screen.blit(piece, (margin_w * i + 10 * (i + 1), screen_height - margin_h - 10))
+
+        queen_w = pygame.image.load("queen_white.png")
+        queen_w = pygame.transform.scale(queen_w, (margin_w, margin_h))
+
+
+
 
 def main():
 
