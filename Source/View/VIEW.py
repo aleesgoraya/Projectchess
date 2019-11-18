@@ -74,6 +74,43 @@ def add_pieces(screen):
         queen_w = pygame.image.load("queen_white.png")
         queen_w = pygame.transform.scale(queen_w, (margin_w, margin_h))
 
+        pawn_w = pygame.image.load("pawn_white.png")
+        pawn_w = pygame.transform.scale(pawn_w, (margin_w, margin_h))
+
+        rook_w = pygame.image.load("rook_white.png")
+        rook_w = pygame.transform.scale(rook_w, (margin_w, margin_h))
+
+        knight_w = pygame.image.load("knight_white.png")
+        knight_w = pygame.transform.scale(knight_w, (margin_w, margin_h))
+
+        king_w = pygame.image.load("king_white.png")
+        king_w = pygame.transform.scale(king_w, (margin_w, margin_h))
+
+        bishop_w = pygame.image.load("bishop_white.png")
+        bishop_w = pygame.transform.scale(bishop_w, (margin_w, margin_h))
+
+        for i in range(8):  # black pawns
+            screen.blit(pawn_w, (margin_w * i + 10 * (i + 1), margin_h+20))
+        for i in range(8):  # Other black pieces
+            if i == 0:
+                piece = rook_w
+            elif i == 1:
+                piece = knight_w
+            elif i == 2:
+                piece = bishop_w
+            elif i == 3:
+                piece = king_w
+            elif i == 4:
+                piece = queen_w
+            elif i == 5:
+                piece = bishop_w
+            elif i == 6:
+                piece = knight_w
+            elif i == 7:
+                piece = rook_w
+            screen.blit(piece, (margin_w * i + 10 * (i + 1), 10))
+
+
 
 
 
