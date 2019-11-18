@@ -4,15 +4,32 @@ from Knight import Knight
 from Pawn import Pawn
 from Queen import Queen
 from Rook import Rook
+from ChessPiece import ChessPiece
 
 
 class Chessboard:
     """A class representing a chess board for a chess game. A chess board
     is a 8*8 grid.
+
+    ==Attribute==
+    P1: player 1 who play white chess pieces
+    P2: player 2 who play black chess pieces
+    board: a list that represents the board
+    white: a list consists of all the white chess pieces
+    black: a list consists of all the black chess pieces
     """
+
+    P1: str
+    P2: str
+    board: list
+    white: list
+    black: list
+
     def __init__(self) -> None:
         """Initializing a chess board for the chess game.
         """
+        self.P1 = "white"
+        self.P2 = "black"
         self.board = [[], [], [], [], [], [], [], []]
         for row in range(len(self.board)):
             for col in range(0, 8):
@@ -63,6 +80,33 @@ class Chessboard:
         for piece in self.black:
             self.board[piece.get_position()[0]][piece.get_position()[1]] = piece
 
+    def get_other_player(self, player: str) -> str:
+        """Return the other player who is playing
+        against <player>
+        """
+        if player == self.P1:
+            return self.P2
+        else:
+            return self.P1
 
+    def get(self, row: int, col: int) -> ChessPiece:
+        """Get the ChessPiece with given <row> and
+        <col>.
+        """
+        return self.board[row][col]
 
+    def move(self, row: int, col: int) -> bool:
+        """Return true if and only if the move is successfully made.
+        """
+        pass
+
+    def has_check(self, player: str) -> bool:
+        """Return true if and only if the <player> 's king is in check.
+        """
+        pass
+
+    def has_check_mate(self, player: str) -> bool:
+        """Return true if and only if the <player> 's king is in check mate.
+        """
+        pass
 
