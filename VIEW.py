@@ -6,13 +6,13 @@ pink = (255, 170, 255)
 light_blue = (82, 200, 220)
 red = (255, 0, 0)
 
+
 def next_colour(colour):
     rand1 = random.randint(100, 255)
     rand2 = random.randint(100, 255)
     rand3 = random.randint(100, 255)
 
     return rand1, rand2, rand3
-
 
 
 def create_board():
@@ -28,7 +28,6 @@ def create_board():
             pygame.draw.rect(screen, colour, (col*margin_w + (col+1)*10, row*margin_h+(row+1)*10, margin_w, margin_h))
             colour = next_colour(colour)
     return screen
-
 
 
 def main():
