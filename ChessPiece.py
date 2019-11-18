@@ -72,17 +72,17 @@ class ChessPiece(ABC):
             right = True
 
         # Piece moves left
-        elif col < self._position[1]:
+        if col < self._position[1]:
             check_position[1] += - 1
             left = True
 
         # Piece moves forward
-        elif row > self._position[0]:
+        if row > self._position[0]:
             check_position[0] += 1
             forward = True
 
         # Piece moves backwards
-        elif row < self._position[0]:
+        if row < self._position[0]:
             check_position[0] += -1
             back = True
 
