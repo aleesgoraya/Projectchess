@@ -1,5 +1,5 @@
-from Chessboard import Chessboard
-from ChessPiece import ChessPiece
+from Chess.Chessboard import Chessboard
+from Chess.ChessPiece import ChessPiece
 
 
 class Chess:
@@ -21,7 +21,7 @@ class Chess:
     def __init__(self) -> None:
         self._board_dimension = 8
         self._chess_board = Chessboard()
-        self._current_turn = Chessboard.P1
+        self._current_turn = self._chess_board.return_p1()
         self._number_of_moves = 0
 
     def get_current_turn(self) -> str:
@@ -75,6 +75,12 @@ class Chess:
                 self._chess_board.has_check_mate(self._chess_board.P2):
             return True
         return False
+
+    def change_turn(self):
+        """
+        Change the which player moves next
+        """
+        self._current_turn = self._chess_board.get_other_player(self.get_current_turn())
 
     # No need for a string representation
     # """

@@ -1,4 +1,4 @@
-from ChessPiece import ChessPiece
+from Chess.ChessPiece import ChessPiece
 
 
 class Queen(ChessPiece):

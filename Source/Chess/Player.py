@@ -1,4 +1,4 @@
-from ChessPiece import ChessPiece
+from Chess import ChessPiece
 from Chess import Chess
 
 

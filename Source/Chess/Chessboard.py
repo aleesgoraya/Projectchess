@@ -1,10 +1,10 @@
-from Bishop import Bishop
-from King import King
-from Knight import Knight
-from Pawn import Pawn
-from Queen import Queen
-from Rook import Rook
-from ChessPiece import ChessPiece
+from Chess.Bishop import Bishop
+from Chess.King import King
+from Chess.Knight import Knight
+from Chess.Pawn import Pawn
+from Chess.Queen import Queen
+from Chess.Rook import Rook
+from Chess.ChessPiece import ChessPiece
 
 
 class Chessboard:
@@ -94,6 +94,12 @@ class Chessboard:
         <col>.
         """
         return self.board[row][col]
+
+    def return_p1(self) -> str:
+        return self.P1
+
+    def return_p2(self) -> str:
+        return self.P2
 
     def move(self, row: int, col: int) -> bool:
         """Return true if and only if the move is successfully made.

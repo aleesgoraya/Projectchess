@@ -1,4 +1,4 @@
-import Player
+from Chess import Player
 
 
 class PlayerHuman(Player):

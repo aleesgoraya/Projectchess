@@ -1,7 +1,9 @@
 import pygame
 import random
-pygame.init()
 
+from Chess.Chess import Chess
+
+pygame.init()
 
 purple = (128, 0, 128)
 pink = (255, 170, 255)
@@ -26,7 +28,8 @@ def create_board():
     screen = pygame.display.set_mode((screen_width, screen_height))
     for row in range(8):
         for col in range(8):
-            pygame.draw.rect(screen, colour, (col*margin_w + (col+1)*10, row*margin_h+(row+1)*10, margin_w, margin_h))
+            pygame.draw.rect(screen, colour,
+                             (col * margin_w + (col + 1) * 10, row * margin_h + (row + 1) * 10, margin_w, margin_h))
             colour = next_colour(colour)
 
     colour = (230, 230, 230)
@@ -50,7 +53,6 @@ def create_board():
 
 
 def add_pieces(screen):
-
     queen_b = pygame.image.load("queen_black.png")
     queen_b = pygame.transform.scale(queen_b, (margin_w, margin_h))
 
@@ -70,7 +72,7 @@ def add_pieces(screen):
     bishop_b = pygame.transform.scale(bishop_b, (margin_w, margin_h))
 
     for i in range(8):  # black pawns
-        screen.blit(pawn_b, (margin_w*i + 10*(i+1), screen_height-(margin_h*2)-20))
+        screen.blit(pawn_b, (margin_w * i + 10 * (i + 1), margin_h + 20))
 
     for i in range(8):  # Other black pieces
         if i == 0:
@@ -89,7 +91,7 @@ def add_pieces(screen):
             piece = knight_b
         elif i == 7:
             piece = rook_b
-        screen.blit(piece, (margin_w * i + 10 * (i + 1), screen_height - margin_h - 10))
+        screen.blit(piece, (margin_w * i + 10 * (i + 1), 10))
 
         queen_w = pygame.image.load("queen_white.png")
         queen_w = pygame.transform.scale(queen_w, (margin_w, margin_h))
@@ -109,9 +111,9 @@ def add_pieces(screen):
         bishop_w = pygame.image.load("bishop_white.png")
         bishop_w = pygame.transform.scale(bishop_w, (margin_w, margin_h))
 
-        for i in range(8):  # black pawns
-            screen.blit(pawn_w, (margin_w * i + 10 * (i + 1), margin_h+20))
-        for i in range(8):  # Other black pieces
+        for i in range(8):  # white pawns
+            screen.blit(pawn_w, (margin_w * i + 10 * (i + 1), screen_height - (margin_h * 2) - 20))
+        for i in range(8):  # Other white pieces
             if i == 0:
                 piece = rook_w
             elif i == 1:
@@ -128,15 +130,7 @@ def add_pieces(screen):
                 piece = knight_w
             elif i == 7:
                 piece = rook_w
-            screen.blit(piece, (margin_w * i + 10 * (i + 1), 10))
-
-
-
-
-
-
-
-
+            screen.blit(piece, (margin_w * i + 10 * (i + 1), screen_height - margin_h - 10))
 
 
 def main():
@@ -145,8 +139,9 @@ def main():
     pygame.display.set_caption("CHESS")
     add_pieces(screen)
     run = True
-
+    chess = Chess()
     while run:
+
 
         pygame.display.flip()
 
@@ -155,9 +150,24 @@ def main():
                 run = False
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_pos = event.pos
-                if mouse_pos[0] > 720 and mouse_pos[0]<870:
-                        if mouse_pos[1] > 130 and mouse_pos[1] < 180:
-                            run = False
+                if 720 < mouse_pos[0] < 870:
+                    if 130 < mouse_pos[1] < 180:
+                        run = False
+                        quit()
+
+                for row in range(8):
+                    for col in range(8):
+                        start_button_x = margin_w * col + 10 * (col + 1)
+                        end_button_x = margin_w * col + 10 * (col + 1) + 77
+                        start_button_y = margin_h * row + 10 * (row + 1)
+                        end_button_y = row * margin_h + 10 * (row + 1) + margin_h
+                        if start_button_x < mouse_pos[0] < end_button_x:
+                            if start_button_y < mouse_pos[1] < end_button_y:
+
+                                if chess.get_current_turn() == chess.get_piece(row, col).get_color():
+                                    print(chess.get_piece(row,col).get_color())
+                                    chess.change_turn()
+
 
     pygame.quit()
 
