@@ -1,5 +1,7 @@
 import pygame
 import random
+pygame.init()
+
 
 purple = (128, 0, 128)
 pink = (255, 170, 255)
@@ -7,7 +9,7 @@ light_blue = (82, 200, 220)
 red = (255, 0, 0)
 margin_w = 77
 margin_h = 66
-screen_width = 709
+screen_width = 900
 screen_height = 618
 
 
@@ -26,6 +28,24 @@ def create_board():
         for col in range(8):
             pygame.draw.rect(screen, colour, (col*margin_w + (col+1)*10, row*margin_h+(row+1)*10, margin_w, margin_h))
             colour = next_colour(colour)
+
+    colour = (230, 230, 230)
+
+    # Restart Button
+    pygame.draw.rect(screen, colour,
+                     (720, 50, 150, 50))
+
+    # Quit Button
+    pygame.draw.rect(screen, colour,
+                     (720, 130, 150, 50))
+
+    font = pygame.font.Font(None, 45)
+    text = font.render("Restart", True, (0, 0, 0))
+    screen.blit(text, [730, 60])
+
+    text = font.render("Quit", True, (0, 0, 0))
+    screen.blit(text, [750, 140])
+
     return screen
 
 
@@ -114,18 +134,30 @@ def add_pieces(screen):
 
 
 
-def main():
 
+
+
+
+
+def main():
+    pygame.init()
     screen = create_board()
-    pygame.display.set_caption("Chess???? CHESSSS!!!!!!")
+    pygame.display.set_caption("CHESS")
     add_pieces(screen)
     run = True
+
     while run:
+
         pygame.display.flip()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_pos = event.pos
+                if mouse_pos[0] > 720 and mouse_pos[0]<870:
+                        if mouse_pos[1] > 130 and mouse_pos[1] < 180:
+                            run = False
 
     pygame.quit()
 
