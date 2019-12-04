@@ -9,10 +9,17 @@ purple = (128, 0, 128)
 pink = (255, 170, 255)
 light_blue = (82, 200, 220)
 red = (255, 0, 0)
+white = (255, 255, 255)
+green = (0, 102, 0)
 margin_w = 77
 margin_h = 66
 screen_width = 900
 screen_height = 618
+
+"""
+Gives out 3 integers each randomly selected. This
+is used to randomize color
+"""
 
 
 def next_colour(colour):
@@ -23,9 +30,15 @@ def next_colour(colour):
     return rand1, rand2, rand3
 
 
+"""
+Creates an 8x8 board 
+"""
+
+
 def create_board():
     colour = pink
     screen = pygame.display.set_mode((screen_width, screen_height))
+    screen.fill(green)
     for row in range(8):
         for col in range(8):
             pygame.draw.rect(screen, colour,
@@ -50,6 +63,11 @@ def create_board():
     screen.blit(text, [750, 140])
 
     return screen
+
+
+"""
+Adds chess pieces to the 8x8 board
+"""
 
 
 def add_pieces(screen):
@@ -140,11 +158,14 @@ def main():
     add_pieces(screen)
     run = True
     chess = Chess()
-    while run:
+    selected = False
+    selectedPiece = 0
 
+    while run:
 
         pygame.display.flip()
 
+        # Check for mouse clicks on buttons
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
@@ -164,10 +185,20 @@ def main():
                         if start_button_x < mouse_pos[0] < end_button_x:
                             if start_button_y < mouse_pos[1] < end_button_y:
 
-                                if chess.get_current_turn() == chess.get_piece(row, col).get_color():
-                                    print(chess.get_piece(row,col).get_color())
+                                print(chess.get_piece(row, col))
+                                if selected:
                                     chess.change_turn()
+                                    print(selected_piece.get_position())
 
+                                if chess.get_piece(row, col) == "" and selected:
+                                    selected = False
+
+                                elif chess.get_piece(row, col) == "":
+                                    print("Invalid move")
+
+                                elif chess.get_current_turn() == chess.get_piece(row, col).get_color():
+                                    selected_piece = chess.get_piece(row, col)
+                                    selected = True
 
     pygame.quit()
 
