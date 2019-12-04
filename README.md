@@ -10,10 +10,10 @@ The two player board game recreated using pygame and python
 
 
 ## Installation
-<img src="https://github.com/aleesgoraya/Projectchess/tree/master/images/Chessboard.png" width="150" height="20"/><img src="https://github.com/aleesgoraya/Projectchess/tree/master/images/compchess.png" width="150" height="20"/>
+<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/chessboard.PNG" width="150" height="150"/><img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/compchess.png" width="150" height="150"/>
 
 ## How To Play
-<img src="https://github.com/aleesgoraya/Projectchess/tree/master/images/Chessboard.png" width="150" height="20"/>
+<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/chessboard.PNG" width="150" height="150"/>
 
 ## Documentation
 
