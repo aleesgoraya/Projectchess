@@ -4,6 +4,7 @@ from abc import ABC, abstractclassmethod
 class ChessPiece(ABC):
     """A class representing a chess piece in the chess game.
 
+    ==Private Attribute==
     _color: the color of this chess piece
     _position: the position of the chess piece
     """
@@ -69,7 +70,7 @@ class ChessPiece(ABC):
         backward_right = False
         backward_left = False
 
-        check_position = [self.position[0], self.position[1]]
+        check_position = [self._position[0], self._position[1]]
         # Piece moves right
         if col > self._position[1]:
             check_position[1] += 1
