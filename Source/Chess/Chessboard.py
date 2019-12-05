@@ -105,18 +105,35 @@ class Chessboard:
         """
         return self.P2
 
-    def move(self, row: int, col: int) -> bool:
+    def move(self, row: int, col: int, piece: ChessPiece) -> bool:
         """Return true if and only if the move is successfully made.
         """
-        pass
+        if self.board[row][col] == "":
+            if (row, col) in piece.get_valid_coordinates():
+                self.board[row][col] = piece
+                return True
+        return False
+
 
     def has_check(self, player: str) -> bool:
         """Return true if and only if the <player> 's king is in check.
         """
-        pass
+        for x in player.chess_piece:
+            if type(x) == King:
+                king_Pos = x.get_position()
+        for x in Chessboard.get_other_player(player).chess_piece:
+            if x.get_position == king_Pos:
+                return True
+        return False
+
 
     def has_check_mate(self, player: str) -> bool:
         """Return true if and only if the <player> 's king is in check mate.
         """
-        pass
+        for x in player.chess_piece:
+            if type(x) == King:
+                if not x.get_valid_coordinates():
+                    return True
+        return False
+
 
