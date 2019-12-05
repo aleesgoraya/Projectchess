@@ -75,3 +75,4 @@ To ensure our game follows the path wanted by the community, we decided to make 
 
 I, Alees Ahmad Goraya, worked on four classes. The classes are Rook, Knight, Bishop, and View class. I helped my fellow group members and wrote how to play section in readme file.
 
+I, Michael Wong, worked on the Chess class as well as the Chessboard class and wrote the Installation section of the README.md file. I also assisted my members with planning.
