@@ -5,6 +5,7 @@ The two player board game recreated using pygame and python
 - [Installation](https://github.com/aleesgoraya/Projectchess#installation)
 - [Unique Features](#unique)
 - [How To Play](https://github.com/aleesgoraya/Projectchess#how-to-play)
+- [Extending our Game](https://github.com/aleesgoraya/Projectchess#extending)
 - [Documentation](https://github.com/aleesgoraya/Projectchess#documentation)
 - [Developers](#developers)
 - [Contibutions](https://github.com/aleesgoraya/Projectchess#contributions)
@@ -46,6 +47,10 @@ files have been created. Go into the dist folder and your View.exe file will be 
 
 This is not your traditional chess game. The controls are simple; Use your mouse to click on the piece you want to move. After selecting your piece, click on the square you want to move to. Simple right!.
 However, if you make and invalid move(click on a square where a move cannot be made) you loose!
+
+## Extending our Game
+
+To ensure our game follows the path wanted by the community, we decided to make our game easily extendable. To do this, our entire repository is public. This will allow you to copy any files and make the desired modifications. We hope with the help of the community, we can make our chess game a unique and fun spinoff of the classic chess game. 
 
 
 ## Documentation
