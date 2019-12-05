@@ -108,7 +108,11 @@ Although we do plan to add some basic AIs in the near future, there is currently
 
 I, Alees Ahmad Goraya, worked on four classes. The classes are Rook, Knight, Bishop, and View class. I helped my fellow group members and wrote how to play section in readme file.
 
-I, Michael Wong, worked on the Chess class as well as the Chessboard class and wrote the Installation section of the README.md file. I also assisted my members with planning.
+I, Michael Wong, worked on the Chess class as well as the Chessboard class and wrote the Installation section of the README.md file. I also assisted my members with planning the structure 
+of this project. When planning the structure, we wanted to create it so that all team members would be able to concurrently work on this project at the same time. I also helped in planning 
+the timeline of this project. For our timeline, we were looking to schedule it such that it would be flexible. We wanted our timeline to be like this so we could have our timeline change if 
+needed. To do this we overestimated are deadlines so that if we had schedule changes or problems occur that we had not predicted we would have the time to handle them and change our schedule 
+around them. 
 
 Spyridon Balageorge:
 Within this chess game, my focus was on the chess pieces. I contributed various methods that allowed us to see if the chess pieces were being moved to a valid location. To do this I created two methods. The first method is specific to each piece and ensures it is moving as expected. The second method ensures the piece does not hit any other pieces and remains within the board. In addition to this, I also created the base for the GUI. This included the game window, importing images for chess pieces, creating the board layout, and creating random colours for the tiles. Finally, in this README, I was responsible for explaining to users how to extend our game, as well as my contribution to the project. 
