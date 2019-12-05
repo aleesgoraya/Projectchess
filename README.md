@@ -91,16 +91,18 @@ To ensure our game follows the path wanted by the community, we decided to make 
   * The `move` returns true if and only if the move is successfully made.
   * The `has_check` returns true if and only if the `player`'s king is in check
   * The `get` returns the chess piece with given `row` and `col`
+  
+ * The `View` class contains methods for initializing the GUI
+   * The `create_board` creates a board and two buttons as a GUI for players
+   * The `add_pieces` addes all the chess pieces with corresponding pictures to the screen 
+   * The `main` runs the pygame application
+   * The `next_color` returns 3 random integers that are used for generating colors
+  
 ## Contributions
 
 I, Alees Ahmad Goraya, worked on four classes. The classes are Rook, Knight, Bishop, and View class. I helped my fellow group members and wrote how to play section in readme file.
 
 I, Michael Wong, worked on the Chess class as well as the Chessboard class and wrote the Installation section of the README.md file. I also assisted my members with planning.
-
-Spyridon Balageorge:
-
-Within this chess game, my focus was on the chess pieces. I contributed various methods that allowed us to see if the chess pieces were being moved to a valid location. To do this I created two methods. The first method is specific to each piece and ensures it is moving as expected. The second method ensures the piece does not hit any other pieces and remains within the board. In addition to this, I also created the base for the GUI. This included the game window, importing images for chess pieces, creating the board layout, and creating random colours for the tiles. Finally, in this README, I was responsible for explaining to users how to extend our game, as well as my contribution to the project. 
-
 
 ## License Information
 GNU GENERAL PUBLIC LICENSE
