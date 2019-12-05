@@ -17,7 +17,7 @@ To Download and install our Chess Game follow these steps:
 1.) Open the CMD and change into the directory that you would like to download our chess game in 
 and execute the command: "git clone https://github.com/aleesgoraya/Projectchess.git"
 
-<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/install1.png"/>
+<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/install1.PNG"/>
 
 2.) You will now have a copy of the repo. Now executed the command:
 "pip install pyinstaller". This will give you the required installer 
@@ -29,13 +29,13 @@ to create a .exe file for our Chess game.
 Source/View and execute the command: "pyinstaller --onefile View.py". this will create 
 the View.exe file required to play our game.
 
-<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/install2.png"/>
+<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/install2.PNG"/>
 
 4.) Open a file exploerer and go to the Source/View directory, you will see a couple of 
 files have been created. Go into the dist folder and your View.exe file will be in there. 
-<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/install3.png"/>
+<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/install3.PNG"/>
 
-<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/install4.png"/>
+<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/install4.PNG"/>
 
 ## Why our Chess Game is Unique
 <img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/chessboard.PNG" width="350" height="350"/>       
