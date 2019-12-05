@@ -16,7 +16,7 @@ The two player board game recreated using pygame and python
 <img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/chessboard.PNG" width="350" height="350"/>
 
 ## This is not your traditional chess game. The controls are simple; Use your mouse to click on the piece you want to move. After selecting your piece, click on the square you want to move to. Simple right!.
-## However, if you make and invalid move(click on a square where a move cannot be made) you loose!
+## However, if you make and invalid move(click on a square where a move cannot be made) you lose!
 
 ## Documentation
 
