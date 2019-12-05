@@ -106,7 +106,7 @@ Although we do plan to add some basic AIs in the near future, there is currently
   
 ## Contributions
 
-I, Alees Ahmad Goraya, worked on four classes. The classes are Rook, Knight, Bishop, and View class. I helped my fellow group members and wrote how to play section in readme file.
+Alees Ahmad Goraya: I worked on four classes. The classes are Rook, Knight, Bishop, and View class. I helped develop and test Rook and Bishop classes. I created a method for knight class which allowed us to see if user was making a valid move. Furthermore, I worked on the View class to develop GUI. I made restart and quit button. I also developed buttons, which allowed us to take user input (pass the row and column pressed by the user). For the README, I built the index and wrote instructions for how to play the game.
 
 I, Michael Wong, worked on the Chess class as well as the Chessboard class and wrote the Installation section of the README.md file. I also assisted my members with planning the structure 
 of this project. When planning the structure, we wanted to create it so that all team members would be able to concurrently work on this project at the same time. I also helped in planning 
