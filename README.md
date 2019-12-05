@@ -70,7 +70,26 @@ To ensure our game follows the path wanted by the community, we decided to make 
 
 ## Documentation
 
+* The `Chess` class contains the game logic
+  * The `move` method will move the pieces to `row`, `col`
+  * The `has_check` checks if the player is in check or not
+  * The `change_turn` will switch the turn to the player who moves next
+  * The `is_game_over` checks if the game is over by checking if any player is in checkmate
+  * The `get_piece` returns the chess piece at the given position
+  * The `get_current_turn` returns the current turn of the chess game
+  * The `get_winner` returns the winner of the chess game
 
+* The `ChessPiece` class contains methods for all the chess pieces
+  * The `move` method changes the `self._position` to the given position
+  * The `get_color` returns the color of the piece (either black or white)
+  * The `get_position` returns the position of the piece
+  * The `get_valid_coordinates` is an **_abstract_** method that will be implemented differently by different chess pieces; it returns a list of valid moves of the piece
+  * The `check_move` returns true if and only if there is another piece on the way that this piece is going
+
+* The `Chessboard` class contains methods for moving pieces, checking turns, and checking winners etc.
+  * The `move` returns true if and only if the move is successfully made.
+  * The `has_check` returns true if and only if the `player`'s king is in check
+  * The `get` returns the chess piece with given `row` and `col`
 ## Contributions
 
 I, Alees Ahmad Goraya, worked on four classes. The classes are Rook, Knight, Bishop, and View class. I helped my fellow group members and wrote how to play section in readme file.
