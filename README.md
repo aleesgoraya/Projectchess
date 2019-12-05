@@ -94,7 +94,7 @@ To ensure our game follows the path wanted by the community, we decided to make 
   
  * The `View` class contains methods for initializing the GUI
    * The `create_board` creates a board and two buttons as a GUI for players
-   * The `add_pieces` addes all the chess pieces with corresponding pictures to the screen 
+   * The `add_pieces` adds all the chess pieces with corresponding pictures to the screen 
    * The `main` runs the pygame application
    * The `next_color` returns 3 random integers that are used for generating colors
   
