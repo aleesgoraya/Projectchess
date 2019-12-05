@@ -61,7 +61,7 @@ The controls are simple.
 
 2.) After selecting your piece, click on the square you want to move to. Simple right!
 
-However, if you make and invalid move(click on a square where a move cannot be made) you lose!
+However, if you make an invalid move (click on a square where a move cannot be made) you lose!
 
 
 ## Extending our Game
