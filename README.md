@@ -9,6 +9,7 @@ The two player board game recreated using pygame and python
 - [Documentation](https://github.com/aleesgoraya/Projectchess#documentation)
 - [Developers](https://github.com/aleesgoraya/Projectchess#developers)
 - [Contibutions](https://github.com/aleesgoraya/Projectchess#contributions)
+- [License Information](https://github.com/aleesgoraya/Projectchess#license-information)
 
 
 
@@ -95,3 +96,8 @@ To ensure our game follows the path wanted by the community, we decided to make 
 I, Alees Ahmad Goraya, worked on four classes. The classes are Rook, Knight, Bishop, and View class. I helped my fellow group members and wrote how to play section in readme file.
 
 I, Michael Wong, worked on the Chess class as well as the Chessboard class and wrote the Installation section of the README.md file. I also assisted my members with planning.
+
+## License Information
+GNU GENERAL PUBLIC LICENSE
+      Version 3, 29 June 2007
+     Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
