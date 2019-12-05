@@ -41,7 +41,7 @@ files have been created. Go into the dist folder and your View.exe file will be 
 
 ## Why our Chess Game is Unique
 <img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/chessboard.PNG" width="350" height="350"/> <img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/compchess.png" width="350" height="350"/>
-- Colorful randomized chessboard.
+- Colorful randomized chessboard compared to traditional chessboard.
 - New rules! If a player makes a move that is not possible, e.g attempts to move a rook diagnolly;  The player loses the game.
 
 ## How To Play
@@ -113,6 +113,8 @@ of this project. When planning the structure, we wanted to create it so that all
 the timeline of this project. For our timeline, we were looking to schedule it such that it would be flexible. We wanted our timeline to be like this so we could have our timeline change if 
 needed. To do this we overestimated are deadlines so that if we had schedule changes or problems occur that we had not predicted we would have the time to handle them and change our schedule 
 around them. 
+
+I, Xuankui Zhu, worked on the Chessboard class, as well as providing suggestions for all classes related to it, such as the Chess class and the Piece classes.
 
 Spyridon Balageorge:
 Within this chess game, my focus was on the chess pieces. I contributed various methods that allowed us to see if the chess pieces were being moved to a valid location. To do this I created two methods. The first method is specific to each piece and ensures it is moving as expected. The second method ensures the piece does not hit any other pieces and remains within the board. In addition to this, I also created the base for the GUI. This included the game window, importing images for chess pieces, creating the board layout, and creating random colours for the tiles. Finally, in this README, I was responsible for explaining to users how to extend our game, as well as my contribution to the project. 
