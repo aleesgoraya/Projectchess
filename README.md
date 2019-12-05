@@ -66,7 +66,13 @@ However, if you make and invalid move(click on a square where a move cannot be m
 
 ## Extending our Game
 
-To ensure our game follows the path wanted by the community, we decided to make our game easily extendable. To do this, our entire repository is public. This will allow you to copy any files and make the desired modifications. We hope with the help of the community, we can make our chess game a unique and fun spinoff of the classic chess game. 
+To ensure our game follows the path wanted by the community, we decided to make our game easily extendable. To do this, our entire repository is public. This will allow you to copy any files and make the desired modifications. We hope with the help of the community, we can make our chess game a unique and fun spinoff of the classic chess game. To get you guys started, below are a few possible ideas:
+
+1) Timer:
+To make the game more difficult for the user, one of you may want to implement a timer. This would put a time restriction on the user, forcing them to make quick decisions.
+
+2) Hard AI:
+Although we do plan to add some basic AIs in the near future, there is currently no plan for an advanced AI. Perharps one of you can come up with the newest hardest AI for chess!
 
 
 ## Documentation
@@ -91,6 +97,13 @@ To ensure our game follows the path wanted by the community, we decided to make 
   * The `move` returns true if and only if the move is successfully made.
   * The `has_check` returns true if and only if the `player`'s king is in check
   * The `get` returns the chess piece with given `row` and `col`
+  
+ * The `View` class contains methods for initializing the GUI
+   * The `create_board` creates a board and two buttons as a GUI for players
+   * The `add_pieces` adds all the chess pieces with corresponding pictures to the screen 
+   * The `main` runs the pygame application
+   * The `next_color` returns 3 random integers that are used for generating colors
+  
 ## Contributions
 
 I, Alees Ahmad Goraya, worked on four classes. The classes are Rook, Knight, Bishop, and View class. I helped my fellow group members and wrote how to play section in readme file.
@@ -98,6 +111,10 @@ I, Alees Ahmad Goraya, worked on four classes. The classes are Rook, Knight, Bis
 I, Michael Wong, worked on the Chess class as well as the Chessboard class and wrote the Installation section of the README.md file. I also assisted my members with planning.
 
 I, Xuankui Zhu, worked on the Chessboard class, as well as providing suggestions for all classes related to it, such as the Chess class and the Piece classes.
+
+Spyridon Balageorge:
+Within this chess game, my focus was on the chess pieces. I contributed various methods that allowed us to see if the chess pieces were being moved to a valid location. To do this I created two methods. The first method is specific to each piece and ensures it is moving as expected. The second method ensures the piece does not hit any other pieces and remains within the board. In addition to this, I also created the base for the GUI. This included the game window, importing images for chess pieces, creating the board layout, and creating random colours for the tiles. Finally, in this README, I was responsible for explaining to users how to extend our game, as well as my contribution to the project. 
+
 
 ## License Information
 GNU GENERAL PUBLIC LICENSE
