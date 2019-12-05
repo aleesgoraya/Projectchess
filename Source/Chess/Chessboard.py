@@ -96,9 +96,13 @@ class Chessboard:
         return self.board[row][col]
 
     def return_p1(self) -> str:
+        """Return the Player 1 of this chess game.
+        """
         return self.P1
 
     def return_p2(self) -> str:
+        """Return the Player 2 of this chess game.
+        """
         return self.P2
 
     def move(self, row: int, col: int) -> bool:

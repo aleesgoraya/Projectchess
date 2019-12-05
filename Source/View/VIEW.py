@@ -16,13 +16,11 @@ margin_h = 66
 screen_width = 900
 screen_height = 618
 
-"""
-Gives out 3 integers each randomly selected. This
-is used to randomize color
-"""
-
 
 def next_colour(colour):
+    """Gives out 3 integers each randomly selected. This
+    is used to randomize color.
+    """
     rand1 = random.randint(100, 255)
     rand2 = random.randint(100, 255)
     rand3 = random.randint(100, 255)
@@ -30,12 +28,9 @@ def next_colour(colour):
     return rand1, rand2, rand3
 
 
-"""
-Creates an 8x8 board 
-"""
-
-
 def create_board():
+    """Creates an 8x8 board.
+    """
     colour = pink
     screen = pygame.display.set_mode((screen_width, screen_height))
     screen.fill(green)
@@ -65,12 +60,9 @@ def create_board():
     return screen
 
 
-"""
-Adds chess pieces to the 8x8 board
-"""
-
-
 def add_pieces(screen):
+    """Adds chess pieces to the 8x8 board.
+    """
     queen_b = pygame.image.load("queen_black.png")
     queen_b = pygame.transform.scale(queen_b, (margin_w, margin_h))
 

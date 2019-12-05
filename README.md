@@ -47,6 +47,7 @@ files have been created. Go into the dist folder and your View.exe file will be 
 This is not your traditional chess game. The controls are simple; Use your mouse to click on the piece you want to move. After selecting your piece, click on the square you want to move to. Simple right!.
 However, if you make and invalid move(click on a square where a move cannot be made) you loose!
 
+
 ## Documentation
 
 ## Contributions
