@@ -5,7 +5,7 @@ The two player board game recreated using pygame and python
 - [Installation](https://github.com/aleesgoraya/Projectchess#installation)
 - [Unique Features](#unique)
 - [How To Play](https://github.com/aleesgoraya/Projectchess#how-to-play)
-- [Extending our Game](https://github.com/aleesgoraya/Projectchess#extending)
+- [Extending our Game](https://github.com/aleesgoraya/Projectchess#extending-our-game)
 - [Documentation](https://github.com/aleesgoraya/Projectchess#documentation)
 - [Developers](#developers)
 - [Contibutions](https://github.com/aleesgoraya/Projectchess#contributions)
