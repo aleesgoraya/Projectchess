@@ -66,7 +66,13 @@ However, if you make and invalid move(click on a square where a move cannot be m
 
 ## Extending our Game
 
-To ensure our game follows the path wanted by the community, we decided to make our game easily extendable. To do this, our entire repository is public. This will allow you to copy any files and make the desired modifications. We hope with the help of the community, we can make our chess game a unique and fun spinoff of the classic chess game. 
+To ensure our game follows the path wanted by the community, we decided to make our game easily extendable. To do this, our entire repository is public. This will allow you to copy any files and make the desired modifications. We hope with the help of the community, we can make our chess game a unique and fun spinoff of the classic chess game. To get you guys started, below are a few possible ideas:
+
+# 1)Timer
+To make the game more difficult for the user, one of you may want to implement a timer. This would put a time restriction on the user, forcing them to make quick decisions.
+
+# 2) Hard AI
+Although we do plan to add some basic AIs in the near future, there is currently no plan for an advanced AI. Perharps one of you can come up with the newest hardest AI for chess!
 
 
 ## Documentation
