@@ -41,7 +41,7 @@ files have been created. Go into the dist folder and your View.exe file will be 
 
 ## Why our Chess Game is Unique
 <img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/chessboard.PNG" width="350" height="350"/> <img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/compchess.png" width="350" height="350"/>
-- Colorful randomized chessboard.
+- Colorful randomized chessboard compared to traditional chessboard.
 - New rules! If a player makes a move that is not possible, e.g attempts to move a rook diagnolly;  The player loses the game.
 
 ## How To Play
@@ -96,6 +96,8 @@ To ensure our game follows the path wanted by the community, we decided to make 
 I, Alees Ahmad Goraya, worked on four classes. The classes are Rook, Knight, Bishop, and View class. I helped my fellow group members and wrote how to play section in readme file.
 
 I, Michael Wong, worked on the Chess class as well as the Chessboard class and wrote the Installation section of the README.md file. I also assisted my members with planning.
+
+I, Xuankui Zhu, worked on the Chessboard class, as well as providing suggestions for all classes related to it, such as the Chess class and the Piece classes.
 
 ## License Information
 GNU GENERAL PUBLIC LICENSE
