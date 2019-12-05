@@ -69,11 +69,13 @@ However, if you make an invalid move (click on a square where a move cannot be m
 To ensure our game follows the path wanted by the community, we decided to make our game easily extendable. To do this, our entire repository is public. This will allow you to copy any files and make the desired modifications. We hope with the help of the community, we can make our chess game a unique and fun spinoff of the classic chess game. To get you guys started, below are a few possible ideas:
 
 1) Timer:
-To make the game more difficult for the user, one of you may want to implement a timer. This would put a time restriction on the user, forcing them to make quick decisions.
+To make the game more difficult for the user, one of you may want to implement a timer. This would put a time restriction on the user, forcing them to make quick decisions. This can be easily done from our View class which is located at Source/View(folder).
 
 2) Hard AI:
 Although we do plan to add some basic AIs in the near future, there is currently no plan for an advanced AI. Perharps one of you can come up with the newest hardest AI for chess!
 
+3) Changing Board, pieces:
+Changing color of board and pieces can be easily done in View class. View class is located at Source/View(folder).
 
 ## Documentation
 
