@@ -80,11 +80,5 @@ class Chess:
         """
         Change the which player moves next
         """
-        self._current_turn = self._chess_board.get_other_player(self.get_current_turn())
-
-    # No need for a string representation
-    # """
-    # Return a string representation of the chess board
-    # """
-    # def get_chess_board(self):
-    #     return self._chess_board.toString()
+        self._current_turn = self._chess_board.get_other_player(
+            self.get_current_turn())
