@@ -1,7 +1,4 @@
-from abc import ABC, abstractclassmethod
-
-
-class ChessPiece(ABC):
+class ChessPiece:
     """A class representing a chess piece in the chess game.
 
     ==Private Attribute==
