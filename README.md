@@ -39,8 +39,9 @@ files have been created. Go into the dist folder and your View.exe file will be 
 <img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/install4.PNG"/>
 
 ## Why our Chess Game is Unique
-<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/chessboard.PNG" width="350" height="350"/>       
-<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/compchess.png" width="350" height="350"/>
+<img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/chessboard.PNG" width="350" height="350"/> <img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/compchess.png" width="350" height="350"/>
+- Colorful randomized chessboard.
+- New rules! If a player makes a move that is not possible, e.g attempts to move a rook diagnolly;  The player loses the game.
 
 ## How To Play
 <img src="https://raw.githubusercontent.com/aleesgoraya/Projectchess/master/images/chessboard.PNG" width="350" height="350"/>
@@ -68,7 +69,9 @@ To ensure our game follows the path wanted by the community, we decided to make 
 
 
 ## Documentation
-I, Alees Ahmad Goraya, worked on four classes. The classes are Rook, Knight, Bishop, and View class. I helped my fellow group members and wrote how to play section in readme file.
+
 
 ## Contributions
+
+I, Alees Ahmad Goraya, worked on four classes. The classes are Rook, Knight, Bishop, and View class. I helped my fellow group members and wrote how to play section in readme file.
 
